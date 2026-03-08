@@ -94,7 +94,7 @@ namespace EpicLibraryApp {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/EpicLibraryApp;V1.0.0.0;component/issuereturnwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/EpicLibraryApp;component/issuereturnwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\IssueReturnWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
