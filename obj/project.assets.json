@@ -4048,11 +4048,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\EpicLibraryApp\\EpicLibraryApp.csproj",
+      "projectUniqueName": "C:\\Users\\muzvo\\Documents\\EpicLibraryApp\\EpicLibraryApp.csproj",
       "projectName": "EpicLibraryApp",
-      "projectPath": "F:\\EpicLibraryApp\\EpicLibraryApp.csproj",
+      "projectPath": "C:\\Users\\muzvo\\Documents\\EpicLibraryApp\\EpicLibraryApp.csproj",
       "packagesPath": "C:\\Users\\muzvo\\.nuget\\packages\\",
-      "outputPath": "F:\\EpicLibraryApp\\obj\\",
+      "outputPath": "C:\\Users\\muzvo\\Documents\\EpicLibraryApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

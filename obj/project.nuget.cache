@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0Wx5kGJGXEc=",
+  "dgSpecHash": "ma+XdjqbI7s=",
   "success": true,
-  "projectFilePath": "F:\\EpicLibraryApp\\EpicLibraryApp.csproj",
+  "projectFilePath": "C:\\Users\\muzvo\\Documents\\EpicLibraryApp\\EpicLibraryApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\muzvo\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
     "C:\\Users\\muzvo\\.nuget\\packages\\azure.identity\\1.14.2\\azure.identity.1.14.2.nupkg.sha512",
