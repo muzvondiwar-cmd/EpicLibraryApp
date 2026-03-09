@@ -9,7 +9,7 @@
         TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignDefaultFont}"
-        Title="Africa University Engineering Library Dashboard" Height="720" Width="1150"
+        Title="Africa University Library Dashboard" Height="720" Width="1150"
         WindowStartupLocation="CenterScreen"
         Loaded="Window_Loaded">
 

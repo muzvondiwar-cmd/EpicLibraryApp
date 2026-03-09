@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EpicLibraryApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b8ac5618d0ae45f05c7232438a9bb58001fd03be")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+571cff96a0ab26c8b2f4b7f17f11f6d990048f48")]
 [assembly: System.Reflection.AssemblyProductAttribute("EpicLibraryApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EpicLibraryApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
