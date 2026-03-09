@@ -31,7 +31,9 @@
 
                 <TextBlock x:Name="ErrorMessage" Text="Invalid ID, Password, or Role." Foreground="#E53935" FontSize="12" HorizontalAlignment="Center" Margin="0,0,0,10" Visibility="Collapsed"/>
 
-                <Button Content="LOGIN" Height="45" Click="LoginButton_Click" Background="#7E57C2" BorderBrush="#7E57C2" Foreground="White" materialDesign:ButtonAssist.CornerRadius="8"/>
+                <Button Content="LOGIN" Height="45" Click="LoginButton_Click" Background="#7E57C2" BorderBrush="#7E57C2" Foreground="White" materialDesign:ButtonAssist.CornerRadius="8" Margin="0,0,0,15"/>
+
+                <Button Content="New student? Register here." Style="{StaticResource MaterialDesignFlatButton}" Foreground="#888888" Click="OpenRegistration_Click" HorizontalAlignment="Center"/>
             </StackPanel>
         </materialDesign:Card>
     </Grid>

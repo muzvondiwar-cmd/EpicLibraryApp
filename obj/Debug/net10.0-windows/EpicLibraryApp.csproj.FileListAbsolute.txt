@@ -382,3 +382,5 @@ C:\Users\muzvo\Documents\EpicLibraryApp\obj\Debug\net10.0-windows\refint\EpicLib
 C:\Users\muzvo\Documents\EpicLibraryApp\obj\Debug\net10.0-windows\EpicLibraryApp.pdb
 C:\Users\muzvo\Documents\EpicLibraryApp\obj\Debug\net10.0-windows\EpicLibraryApp.genruntimeconfig.cache
 C:\Users\muzvo\Documents\EpicLibraryApp\obj\Debug\net10.0-windows\ref\EpicLibraryApp.dll
+C:\Users\muzvo\Documents\EpicLibraryApp\obj\Debug\net10.0-windows\RegistrationWindow.baml
+C:\Users\muzvo\Documents\EpicLibraryApp\obj\Debug\net10.0-windows\RegistrationWindow.g.cs
