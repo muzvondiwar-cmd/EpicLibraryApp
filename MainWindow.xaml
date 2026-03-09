@@ -9,7 +9,7 @@
         TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignDefaultFont}"
-        Title="Africa University Library Dashboard" Height="720" Width="1150"
+        Title="Africa University Engineering Library Dashboard" Height="720" Width="1150"
         WindowStartupLocation="CenterScreen"
         Loaded="Window_Loaded">
 
@@ -39,14 +39,14 @@
                         </StackPanel>
                     </Button>
 
-                    <Button Style="{StaticResource MaterialDesignFlatButton}" Foreground="#A0A0B0" Height="50" HorizontalContentAlignment="Left" Padding="30,0,0,0" Margin="10,0,10,5" Click="OpenIssueReturn_Click">
+                    <Button x:Name="IssueReturnButton" Style="{StaticResource MaterialDesignFlatButton}" Foreground="#A0A0B0" Height="50" HorizontalContentAlignment="Left" Padding="30,0,0,0" Margin="10,0,10,5" Click="OpenIssueReturn_Click">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="BookSync" Width="20" Height="20" Margin="0,0,15,0"/>
                             <TextBlock Text="Issue / Return" FontSize="16"/>
                         </StackPanel>
                     </Button>
 
-                    <Button Style="{StaticResource MaterialDesignFlatButton}" Foreground="#A0A0B0" Height="50" HorizontalContentAlignment="Left" Padding="30,0,0,0" Margin="10,0,10,5" Click="OpenMembers_Click">
+                    <Button x:Name="ManageMembersButton" Style="{StaticResource MaterialDesignFlatButton}" Foreground="#A0A0B0" Height="50" HorizontalContentAlignment="Left" Padding="30,0,0,0" Margin="10,0,10,5" Click="OpenMembers_Click">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="AccountGroup" Width="20" Height="20" Margin="0,0,15,0"/>
                             <TextBlock Text="Members" FontSize="16"/>
@@ -66,16 +66,14 @@
         <Border Grid.Column="1" Background="#F4F6F9" Padding="40">
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/> <RowDefinition Height="Auto"/> <RowDefinition Height="*"/>    </Grid.RowDefinitions>
 
                 <StackPanel Grid.Row="0" Margin="0,0,0,30">
                     <TextBlock x:Name="WelcomeMessageText" Text="Welcome back..." FontSize="32" FontWeight="Light" Foreground="#333333"/>
                     <TextBlock x:Name="UserRoleText" Text="Loading your library dashboard..." FontSize="15" Foreground="#777777" Margin="0,5,0,0"/>
                 </StackPanel>
 
-                <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Top">
+                <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Top" Margin="0,0,0,30">
                     <materialDesign:Card Width="250" Height="120" Margin="0,0,20,0" UniformCornerRadius="8" materialDesign:ElevationAssist.Elevation="Dp2">
                         <StackPanel Margin="20">
                             <TextBlock Text="TOTAL BOOKS" FontSize="12" FontWeight="SemiBold" Foreground="#888888" Margin="0,0,0,10"/>
@@ -90,6 +88,25 @@
                         </StackPanel>
                     </materialDesign:Card>
                 </StackPanel>
+
+                <Grid Grid.Row="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    
+                    <TextBlock Grid.Row="0" Text="My Active Loans" FontSize="20" FontWeight="Bold" Foreground="#333333" Margin="0,0,0,15"/>
+                    
+                    <DataGrid x:Name="MyBooksGrid" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True" HeadersVisibility="Column" Background="White" materialDesign:DataGridAssist.CornerRadius="8" materialDesign:ElevationAssist.Elevation="Dp1">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Book Title" Binding="{Binding Book.Title}" Width="*"/>
+                            <DataGridTextColumn Header="Author" Binding="{Binding Book.Author}" Width="*"/>
+                            <DataGridTextColumn Header="Borrowed On" Binding="{Binding IssueDate, StringFormat=d}" Width="150"/>
+                            <DataGridTextColumn Header="Due Date" Binding="{Binding DueDate, StringFormat=d}" Width="150"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+                
             </Grid>
         </Border>
     </Grid>
