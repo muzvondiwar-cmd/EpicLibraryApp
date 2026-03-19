@@ -39,6 +39,13 @@
                         </StackPanel>
                     </Button>
 
+                    <Button x:Name="BrowseCatalogButton" Style="{StaticResource MaterialDesignFlatButton}" Foreground="#A0A0B0" Height="50" HorizontalContentAlignment="Left" Padding="30,0,0,0" Margin="10,0,10,5" Click="OpenCatalog_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="BookSearch" Width="20" Height="20" Margin="0,0,15,0"/>
+                            <TextBlock Text="Browse Catalog" FontSize="16"/>
+                        </StackPanel>
+                    </Button>
+
                     <Button x:Name="IssueReturnButton" Style="{StaticResource MaterialDesignFlatButton}" Foreground="#A0A0B0" Height="50" HorizontalContentAlignment="Left" Padding="30,0,0,0" Margin="10,0,10,5" Click="OpenIssueReturn_Click">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="BookSync" Width="20" Height="20" Margin="0,0,15,0"/>

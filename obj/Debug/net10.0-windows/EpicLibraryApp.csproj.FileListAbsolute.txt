@@ -384,3 +384,5 @@ C:\Users\muzvo\Documents\EpicLibraryApp\obj\Debug\net10.0-windows\EpicLibraryApp
 C:\Users\muzvo\Documents\EpicLibraryApp\obj\Debug\net10.0-windows\ref\EpicLibraryApp.dll
 C:\Users\muzvo\Documents\EpicLibraryApp\obj\Debug\net10.0-windows\RegistrationWindow.baml
 C:\Users\muzvo\Documents\EpicLibraryApp\obj\Debug\net10.0-windows\RegistrationWindow.g.cs
+C:\Users\muzvo\Documents\EpicLibraryApp\obj\Debug\net10.0-windows\StudentCatalogWindow.baml
+C:\Users\muzvo\Documents\EpicLibraryApp\obj\Debug\net10.0-windows\StudentCatalogWindow.g.cs

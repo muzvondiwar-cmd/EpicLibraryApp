@@ -1,0 +1,52 @@
+<Window x:Class="EpicLibraryApp.StudentCatalogWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignDefaultFont}"
+        Title="Browse Engineering Catalog" Height="650" Width="900"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="ToolWindow"
+        Loaded="Window_Loaded">
+
+    <Grid Background="#F4F6F9">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Background="White" Padding="30" materialDesign:ElevationAssist.Elevation="Dp2" Margin="0,0,0,10">
+            <StackPanel>
+                <TextBlock Text="Library Catalog" FontSize="28" FontWeight="Bold" Foreground="#333333"/>
+                <TextBlock Text="Find and borrow your next text instantly." FontSize="15" Foreground="#777777" Margin="0,5,0,0"/>
+            </StackPanel>
+        </Border>
+
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Padding="20">
+            <ItemsControl x:Name="BooksItemsControl">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Left"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <materialDesign:Card Width="230" Margin="10,10,20,20" UniformCornerRadius="12" materialDesign:ElevationAssist.Elevation="Dp3" Background="White">
+                            <StackPanel Margin="20">
+                                <materialDesign:PackIcon Kind="BookOpenPageVariant" Width="50" Height="50" Foreground="#7E57C2" HorizontalAlignment="Center" Margin="0,10,0,15"/>
+                                
+                                <TextBlock Text="{Binding Title}" FontSize="16" FontWeight="Bold" Foreground="#333333" TextWrapping="Wrap" TextAlignment="Center" Height="45" TextTrimming="CharacterEllipsis"/>
+                                <TextBlock Text="{Binding Author}" FontSize="13" Foreground="#888888" TextAlignment="Center" Margin="0,5,0,15"/>
+                                <TextBlock Text="{Binding ISBN, StringFormat=ISBN: {0}}" FontSize="11" Foreground="#AAAAAA" TextAlignment="Center" Margin="0,0,0,15"/>
+                                
+                                <Button Content="BORROW NOW" Background="#26A69A" BorderBrush="#26A69A" Foreground="White" Height="40" materialDesign:ButtonAssist.CornerRadius="8" Click="BorrowBook_Click"/>
+                            </StackPanel>
+                        </materialDesign:Card>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+    </Grid>
+</Window>

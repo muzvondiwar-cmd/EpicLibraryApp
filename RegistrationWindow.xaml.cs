@@ -18,7 +18,7 @@ namespace EpicLibraryApp
             string studentId = StudentIdBox.Text.Trim();
             string password = PasswordBox.Password;
 
-            // 1. Basic validation
+            // Basic validation to make sure they didn't leave it blank
             if (string.IsNullOrWhiteSpace(fullName) || string.IsNullOrWhiteSpace(studentId) || string.IsNullOrWhiteSpace(password))
             {
                 ShowMessage("⚠️ Please fill in all fields.", Colors.DarkOrange);
@@ -27,7 +27,7 @@ namespace EpicLibraryApp
 
             using (var db = new LibraryContext())
             {
-                // 2. Check if the Student ID is already registered
+                // Check if the Student ID is already taken
                 bool userExists = db.Members.Any(m => m.StudentId == studentId);
                 
                 if (userExists)
@@ -36,22 +36,21 @@ namespace EpicLibraryApp
                     return;
                 }
 
-                // 3. Create the new user
+                // Create the new student
                 var newStudent = new Member
                 {
                     Name = fullName,
                     StudentId = studentId,
                     Password = password,
-                    Role = "Student" // Automatically force the role to Student for security
+                    Role = "Student" // Lock the role to student for safety
                 };
 
-                // 4. Save to database
+                // Save to the database
                 db.Members.Add(newStudent);
                 db.SaveChanges();
 
                 ShowMessage("✅ Registration successful! You can now log in.", Colors.Green);
                 
-                // Clear the form
                 FullNameBox.Clear();
                 StudentIdBox.Clear();
                 PasswordBox.Clear();
@@ -67,6 +66,7 @@ namespace EpicLibraryApp
 
         private void BackToLogin_Click(object sender, RoutedEventArgs e)
         {
+            // Go back to the login screen
             LoginWindow loginWindow = new LoginWindow();
             loginWindow.Show();
             this.Close();
